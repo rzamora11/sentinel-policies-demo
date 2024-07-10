@@ -1,0 +1,16 @@
+# Define the working hours
+working_hours_start = 9
+working_hours_end = 18
+
+# Get the current hour in UTC (you might need to adjust this based on your timezone)
+time = time("hour")
+
+# Check if the current hour falls within the working hours
+time_allowed = rule {
+    time >= working_hours_start and time < working_hours_end
+}
+
+# Define the main rule
+main = rule {
+    time_allowed is true
+}
