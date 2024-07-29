@@ -5,10 +5,16 @@ working_hours_end = 11
 # Get the current hour in UTC (you might need to adjust this based on your timezone)
 time = time("hour")
 
+# Log the current hour
+print("Current hour (UTC):", time)
+
 # Check if the current hour falls within the working hours
 time_allowed = rule {
     time >= working_hours_start and time < working_hours_end
 }
+
+# Log whether the time is allowed
+print("Time allowed status:", time_allowed)
 
 # Define the main rule
 main = rule {
