@@ -1,3 +1,5 @@
+import "time"
+
 # Define the working hours
 working_hours_start = 9
 working_hours_end = 11
