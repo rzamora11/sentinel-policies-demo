@@ -1,6 +1,6 @@
 # Define the working hours
 working_hours_start = 9
-working_hours_end = 18
+working_hours_end = 11
 
 # Get the current hour in UTC (you might need to adjust this based on your timezone)
 time = time("hour")
