@@ -3,7 +3,7 @@ import "tfrun"
 
 # Define the working hours
 hour_min = 9
-hour_max = 11
+hour_max = 12
 
 # Get the current hour in UTC (you might need to adjust this based on your timezone)
 #time = time("hour")
