@@ -7,7 +7,7 @@ working_hours_end = 11
 
 # Get the current hour in UTC (you might need to adjust this based on your timezone)
 #time = time("hour")
-tfrun_created_at = time.load(tfrun.created_at)
+tfrun_created_at = time.load(tfrun.created_at.hour)
 
 # Log the current hour
 print("Current hour (UTC):", tfrun_created_at)
