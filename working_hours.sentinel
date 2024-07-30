@@ -2,8 +2,8 @@ import "time"
 import "tfrun"
 
 # Define the working hours
-working_hours_start = 9
-working_hours_end = 11
+hour_min = 9
+hour_max = 11
 
 # Get the current hour in UTC (you might need to adjust this based on your timezone)
 #time = time("hour")
@@ -14,16 +14,13 @@ print("Current hour (UTC):", tfrun_created_at)
 
 # Check if the current hour falls within the working hours
 time_allowed = rule {
-    tfrun_created_at >= working_hours_start and tfrun_created_at < working_hours_end
+    tfrun_created_at >= hour_min and tfrun_created_at < hour_max
 }
 
 # Log whether the time is allowed
 print("Time allowed status:", time_allowed)
 
 # Define the main rule
-/*main = rule {
-    time_allowed is true
-}*/
 main = rule {
-	tfrun_created_at.hour >= hour_min and tfrun_created_at.hour < hour_max
+    time_allowed is true
 }
