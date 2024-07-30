@@ -14,7 +14,7 @@ print("Current hour (UTC):", tfrun_created_at)
 
 # Check if the current hour falls within the working hours
 time_allowed = rule {
-    timeVar >= working_hours_start and timeVar < working_hours_end
+    tfrun_created_at >= working_hours_start and tfrun_created_at < working_hours_end
 }
 
 # Log whether the time is allowed
@@ -25,5 +25,5 @@ print("Time allowed status:", time_allowed)
     time_allowed is true
 }*/
 main = rule {
-	timeVar.hour >= hour_min and timeVar.hour < hour_max
+	tfrun_created_at.hour >= hour_min and tfrun_created_at.hour < hour_max
 }
